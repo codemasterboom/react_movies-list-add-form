@@ -25,8 +25,8 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
   function isFormValid() {
     return (
       title.trim() !== '' &&
-      imdbUrl.trim() !== '' &&
-      imgUrl.trim() !== '' &&
+      pattern.test(imgUrl) &&
+      pattern.test(imdbUrl) &&
       imdbId.trim() !== ''
     );
   }
